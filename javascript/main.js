@@ -42,17 +42,26 @@ $(document).ready(function () {
     // Focus back on the text input for the next question. --Korey
     textGuess.focus();
 
+    $('#countdown').countdown({ 
+        until: +30, 
+        format: '<p>S</p>', 
+        onExpiry: function () {
+            // 30 seconds is up!
+            // add functionality here 
+        }   
+    });
+
     //a timer which allows user 20 seconds to make a guess or they get marked wrong -- Pranay
 
-    setTimeout(function () {
-        console.log("setTimeout...")
-        //alert("Sorry you took too long!");
-        $("#hintbox hint").replaceWith("<p>Sorry you took too long!</p>");
-        //adding jquery to do some DOM manipulation when the time is out
-        $("#resultbox").hide();
-        //$("#hintbox").hide();
-        $(".gbox input").replaceWith("<p>Press Submit to start again</p>");
-    }, 10000)
+    //setTimeout(function () {
+    //    console.log("setTimeout...")
+    //    //alert("Sorry you took too long!");
+    //    $("#hintbox hint").replaceWith("<p>Sorry you took too long!</p>");
+    //    //adding jquery to do some DOM manipulation when the time is out
+    //    $("#resultbox").hide();
+    //    //$("#hintbox").hide();
+    //    $(".gbox input").replaceWith("<p>Press Submit to start again</p>");
+    //}, 10000)
 });
 
 

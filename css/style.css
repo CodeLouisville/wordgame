@@ -85,6 +85,14 @@ nav ul li.selected {
     height: 100px;
 }
 
+#countdownbox {
+    height: 100px;
+}
+
+#countdown {
+    font-size: 1.4em;
+}
+
 #hintbox {
     height: 125px;
 }
