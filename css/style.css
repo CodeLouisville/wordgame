@@ -54,6 +54,7 @@ nav ul li.selected {
 
 .container {
     max-width: 600px;
+    min-height: 150px;
     margin: 0 auto;
 }
 /*********************
