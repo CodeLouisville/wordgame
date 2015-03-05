@@ -30,34 +30,31 @@ function getSecretWord() {
     return secretWords[randIndex];
 }
 
-// this function is currently assigned to the OnLoad event of the body of the document.  So when the OnLoad event fires off
-// for the body of the html document, the code in this function will automatically execute.
-function onLoad() {
+//adding jquery to run onLoad function when document is ready 
+$(document).ready(function () {
     console.log("started onLoad");
-    var textGuess = document.getElementById('txtGuess'); //creating a variable for the text of the guess(pranay)
+    var textGuess = $('#txtguess'); 
     currentSecretWord = getSecretWord();
-    document.getElementById('hint').innerHTML = "<p>" + currentSecretWord.hint + "</p>";
+    $('#hint').html("<p>" + currentSecretWord.hint + "</p>");
     player.guesses = MAX_ATTEMPTS;
     //make the value of textGuess null(in case it has a value from previous uses of OnLoad function)
     textGuess.value = '';
     // Focus back on the text input for the next question. --Korey
     textGuess.focus();
-    
+
     //a timer which allows user 20 seconds to make a guess or they get marked wrong -- Pranay
 
-    setTimeout(function(){
-       console.log("setTimeout...")
-       alert("Sorry you took too long!");
-       //adding jquery to do some DOM manipulation when the time is out
-       $("#resultbox").hide();
-       $("#hintbox").hide();
-       $(".gbox input").replaceWith("<p>Press Submit to start again</p>");
-       },10000)
+    setTimeout(function () {
+        console.log("setTimeout...")
+        //alert("Sorry you took too long!");
+        $("#hintbox hint").replaceWith("<p>Sorry you took too long!</p>");
+        //adding jquery to do some DOM manipulation when the time is out
+        $("#resultbox").hide();
+        //$("#hintbox").hide();
+        $(".gbox input").replaceWith("<p>Press Submit to start again</p>");
+    }, 10000)
+});
 
-}
-
-//adding jquery to run onLoad function when document is ready 
-//$(document).ready(onLoad);
 
 function checkWord() {
     console.log("started checkWord");
