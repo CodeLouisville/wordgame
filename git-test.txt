@@ -1,6 +1,7 @@
 this file is for testing git.  Add anything you want to it. - Rob
 testing git push origin gh-pages
 
+******How to add Git Comments to your Asana project tasks. *****
 
 This service adds commit messages as comments to Asana tasks. Once enabled, commit messages
 are checked for Asana task URLs (for example, https://app.asana.com/0/12345678/9012345) or task IDs
@@ -28,5 +29,11 @@ Active
 
 We will run this service when an event is triggered.
 
-forgot to add the #symbol on the asana task_id = '#28623535904133' https://app.asana.com/0/24129616710901/28623535904133
+Note:  Errins Notes....
+
+In Asana create a tag with the task id # and then add it to your git commit, see example below.
+In Git git commit -a -m "asana task_id = '#28416484662336' https://app.asana.com/0/24129616710901/28416484662336"
+Push to my local repo on git-hub, not code louisville, to see commit comments show up on Asana, its in your personal
+clone repo or orignal that i set up the Git and Asana link.  This is where im at so far, the only issue it post 3 times.
+but it post.. will work on this. Share if you know of a better way, but this works ok.
 
