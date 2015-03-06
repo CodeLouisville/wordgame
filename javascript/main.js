@@ -150,7 +150,6 @@ function displayResult(result) {
     setTimeout(function () {
         $('#resultbox').hide()
         $('#submit').disabled = false;
-        $('#txtGuess').val() = '';
     }, 2000);
 }
 
