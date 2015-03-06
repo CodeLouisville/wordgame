@@ -137,7 +137,7 @@ function displayResult(result) {
     $submitButton.disabled = true;
     if (result) {
         $resultDivText.innerHTML = 'Correct!';
-        $resultDiv.style.backgroundColor = 'rgba(0, 255, 0, 0.7)';
+         $resultDiv.css({'background-color':'rgba(255, 0, 0, 0.7)'});
 
     } else {
         if (player.guesses > 0) {
