@@ -43,7 +43,7 @@ $(document).ready(function () {
     textGuess.focus();
 
     $('#countdown').countdown({ 
-        until: +30, 
+        until: +10, 
         format: '<p>S</p>', 
         onExpiry: function () {
             // 30 seconds is up!
