@@ -134,6 +134,7 @@ function displayResult(result) {
     $('#submit').disabled = true;
     if (result) {
        $('#resultText').innerHTML = 'Correct!';
+       console.log($('$resultText'))
        $('#resultBox').css({'background-color':'rgba(255, 0, 0, 0.7)'});
 
     } else {
