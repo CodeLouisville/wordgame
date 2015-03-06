@@ -58,7 +58,7 @@ function refreshQuestions(){
 //putting countDown in a function
 function countDown(){
     //refreshing the countdown form earlier uses
-    $('#countdown').stop();
+    //$('#countdown').stop();
     $('#countdown').countdown({ 
         until: +15, 
         format: '<p>S</p>', 
