@@ -49,7 +49,7 @@ function refreshQuestions(){
     //reset the countdown and make it zero if it was used anywhere
     $('#countdown').stop();
     $('#countdown').countdown({ 
-        until: +30, 
+        until: +5, 
         format: '<p>S</p>', 
         onExpiry: function () {
             // 30 seconds is up!
