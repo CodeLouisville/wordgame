@@ -41,7 +41,6 @@ $(document).ready(function () {
 //replaced with jquery document.ready, I'm putting
 //it in another function which can then be called wherever onLoad is called(Pranay)
 function refreshQuestions(){
-    countDown();
     console.log("refreshQuestions...")
     var textGuess = $('#txtguess'); 
     currentSecretWord = getSecretWord();
@@ -66,19 +65,14 @@ function refreshQuestions(){
     
 }
 
-//putting countDown in a function
-function countDown(){
-    //refreshing the countdown form earlier uses
-    
-}
+
 
 function checkWord() {
     
-    countDown();
     console.log("started checkWord");
-    var $word = $('#txtGuess').val();
+    var word = $('#txtGuess').val();
 
-    if ($word.toLowerCase() == currentSecretWord.$word) {
+    if (word.toLowerCase() == currentSecretWord.word) {
         updateScore(true);
         displayResult(true);
 
