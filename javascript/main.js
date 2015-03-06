@@ -78,7 +78,7 @@ function checkWord() {
         var correctAnswer = secretWords.splice(correctIndex, 1);
         correctWords.push(correctAnswer);
 
-        document.getElementById('txtGuess').value = "";
+        $('#txtGuess').value() = "";
 
     } else {
         updateScore(false);
@@ -128,12 +128,13 @@ function loadScoreDiv() {
 }
 
 function displayResult(result) {
+    console.log("displayResult");
     
     $('#resultbox').css("display","block");
     $('#submit').disabled = true;
     if (result) {
        $('#resultText').innerHTML = 'Correct!';
-         $('#resultBox').css({'background-color':'rgba(255, 0, 0, 0.7)'});
+       $('#resultBox').css({'background-color':'rgba(255, 0, 0, 0.7)'});
 
     } else {
         if (player.guesses > 0) {
