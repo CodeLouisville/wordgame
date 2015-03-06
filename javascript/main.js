@@ -40,6 +40,7 @@ $(document).ready(function () {
 //replaced with jquery document.ready, I'm putting
 //it in another function which can then be called wherever onLoad is called(Pranay)
 function refreshQuestions(){
+    console.log("refreshQuestions...")
     var textGuess = $('#txtguess'); 
     currentSecretWord = getSecretWord();
     $('#hint').html("<p>" + currentSecretWord.hint + "</p>");
