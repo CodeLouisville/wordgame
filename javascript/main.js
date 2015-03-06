@@ -55,13 +55,17 @@ function refreshQuestions(){
             // 30 seconds is up!
             // add functionality here 
             alert("You took too long");
-            $(".gbox").hide();
+            timeOut();
         }   
     });
     
 }
 
-
+function timeOut(){
+    $(".gbox").hide();
+    $("#resultbox").show();
+    
+}
 
 function checkWord() {
     
