@@ -56,9 +56,10 @@ function refreshQuestions(){
 
 //putting countDown in a function
 function countDown(){
+    //refreshing the countdown form earlier uses
     $('#countdown').stop();
     $('#countdown').countdown({ 
-        until: +10, 
+        until: +15, 
         format: '<p>S</p>', 
         onExpiry: function () {
             // 30 seconds is up!
@@ -70,7 +71,7 @@ function countDown(){
 }
 
 function checkWord() {
-    //stopping countdown
+    
     countDown();
     console.log("started checkWord");
     var $word = $('#txtGuess').val();
