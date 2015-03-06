@@ -55,29 +55,15 @@ function refreshQuestions(){
             // 30 seconds is up!
             // add functionality here 
             alert("You took too long");
-            timeOut();
+            $(".gbox").hide();
+            $("#resultbox").show();
+            $("#countdownbox").show();
         }   
     });
     
 }
 
-function timeOut(){
-    $(".gbox").hide();
-    $("#resultbox").show();
-    $("#countdownbox").show();
-    //$('#countdown').stop();
-    $('#countdown').countdown({ 
-        until: +5, 
-        format: '<p>S</p>', 
-        onExpiry: function () {
-            // 30 seconds is up!
-            // add functionality here 
-            alert("You took too long");
-        
-        }   
-    });
-    
-}
+
 
 function checkWord() {
     
