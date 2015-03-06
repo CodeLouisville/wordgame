@@ -129,13 +129,12 @@ function loadScoreDiv() {
 
 function displayResult(result) {
     console.log("displayResult");
+    console.log($('#txtGuess').val());
     
     $('#resultbox').css("display","block");
     $('#submit').disabled = true;
     if (result) {
        $('#resultText').html('Correct!');
-       
-       console.log($('$resultText').html())
        $('#resultBox').css({'background-color':'rgba(255, 0, 0, 0.7)'});
 
     } else {
