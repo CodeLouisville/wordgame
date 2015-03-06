@@ -54,7 +54,7 @@ function refreshQuestions(){
         onExpiry: function () {
             // 30 seconds is up!
             // add functionality here 
-            alert("You took too long");
+            
             $('#countdownbox').hide();
         }   
     });
