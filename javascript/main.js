@@ -136,18 +136,18 @@ function displayResult(result) {
     $resultDiv.css("display","block");
     $submitButton.disabled = true;
     if (result) {
-        $resultDivText.innerHTML = 'Correct!';
-         $resultDiv.css({'background-color':'rgba(255, 0, 0, 0.7)'});
+       $('#resultText').innerHTML = 'Correct!';
+         $('#resultBox').css({'background-color':'rgba(255, 0, 0, 0.7)'});
 
     } else {
         if (player.guesses > 0) {
-            $resultDivText.innerHTML = 'Incorrect!';
-            $guessesDivText.innerHTML = 'You have ' + player.guesses + ' guesses left.';
-            $resultDiv.css({'background-color':'rgba(255, 0, 0, 0.7)'});
+            $('#resultText').innerHTML = 'Incorrect!';
+            $('#guessesText').innerHTML = 'You have ' + player.guesses + ' guesses left.';
+            $('#resultbox').css({'background-color':'rgba(255, 0, 0, 0.7)'});
         } else {
-            $resultDivText.innerHTML = 'GAME OVER';
-            $guessesDivText.innerHTML = 'Final Score: ' + player.finalScore;
-            $restartButton.style.display = "inline";
+            $('#resultText').innerHTML = 'GAME OVER';
+            $('#guessesText').innerHTML = 'Final Score: ' + player.finalScore;
+            $('#restart').style.display = "inline";
             return;
         }
     }
