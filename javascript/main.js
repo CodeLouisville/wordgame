@@ -56,6 +56,8 @@ function refreshQuestions(){
             // add functionality here 
             
             $('#countdownbox').hide();
+            $('#resultText').html('You took too long!');
+            $('#resultbox').show();
         }   
     });
     
