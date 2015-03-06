@@ -69,6 +69,8 @@ function countDown(){
 }
 
 function checkWord() {
+    //stopping countdown
+    $(#countdown).stop();
     console.log("started checkWord");
     var $word = $('#txtGuess').val();
 
