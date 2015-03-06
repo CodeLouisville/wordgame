@@ -55,9 +55,7 @@ function refreshQuestions(){
             // 30 seconds is up!
             // add functionality here 
             alert("You took too long");
-            $(".gbox").hide();
-            $("#resultbox").show();
-            $("#countdownbox").show();
+            $('#countdownbox').hide();
         }   
     });
     
