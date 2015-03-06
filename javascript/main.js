@@ -152,6 +152,7 @@ function displayResult(result) {
     setTimeout(function () {
         $('#resultbox').hide()
         $('#submit').disabled = false;
+        refreshQuestions();
     }, 2000);
 }
 
