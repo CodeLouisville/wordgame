@@ -133,7 +133,7 @@ function displayResult(result) {
     $('#resultbox').css("display","block");
     $('#submit').disabled = true;
     if (result) {
-       $('#resultText').innerHTML = 'Correct!';
+       $('#resultText').html('Correct!');
        
        console.log($('$resultText').html())
        $('#resultBox').css({'background-color':'rgba(255, 0, 0, 0.7)'});
@@ -141,11 +141,11 @@ function displayResult(result) {
     } else {
         if (player.guesses > 0) {
             $('#resultText').html('Incorrect!');
-            $('#guessesText').innerHTML = 'You have ' + player.guesses + ' guesses left.';
+            $('#guessesText').html('You have ' + player.guesses + ' guesses left.');
             $('#resultbox').css({'background-color':'rgba(255, 0, 0, 0.7)'});
         } else {
-            $('#resultText').innerHTML = 'GAME OVER';
-            $('#guessesText').innerHTML = 'Final Score: ' + player.finalScore;
+            $('#resultText').html('GAME OVER');
+            $('#guessesText').html('Final Score: ' + player.finalScore);
             $('#restart').style.display = "inline";
             return;
         }
