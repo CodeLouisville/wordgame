@@ -65,8 +65,7 @@ function countDown(){
         onExpiry: function () {
             // 30 seconds is up!
             // add functionality here 
-            alert("Sorry you took too long");
-            restartGame();
+            rereshQuestions();
         }   
     });
 }
