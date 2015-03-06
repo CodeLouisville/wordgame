@@ -56,7 +56,6 @@ function refreshQuestions(){
             // add functionality here 
             alert("You took too long");
             $('#countdown').countdown({ 
-        console.log('second timer');
         until: +5, 
         format: '<p>S</p>', 
         onExpiry: function () {
