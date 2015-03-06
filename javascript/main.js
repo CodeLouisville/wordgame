@@ -143,7 +143,7 @@ function displayResult(result) {
         if (player.guesses > 0) {
             $resultDivText.innerHTML = 'Incorrect!';
             $guessesDivText.innerHTML = 'You have ' + player.guesses + ' guesses left.';
-            $resultDiv.style.backgroundColor = 'rgba(255, 0, 0, 0.7)';
+            $resultDiv.css({'background-color':'rgba(255, 0, 0, 0.7)'});
         } else {
             $resultDivText.innerHTML = 'GAME OVER';
             $guessesDivText.innerHTML = 'Final Score: ' + player.finalScore;
