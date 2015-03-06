@@ -64,6 +64,18 @@ function refreshQuestions(){
 function timeOut(){
     $(".gbox").hide();
     $("#resultbox").show();
+    $("#countdownbox").show();
+    $('#countdown').stop();
+    $('#countdown').countdown({ 
+        until: +30, 
+        format: '<p>S</p>', 
+        onExpiry: function () {
+            // 30 seconds is up!
+            // add functionality here 
+            alert("You took too long");
+        
+        }   
+    });
     
 }
 
