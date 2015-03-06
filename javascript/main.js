@@ -169,6 +169,8 @@ function displayResult(result) {
 }
 
 function restartGame() {
+    //starting countDown
+    countDown();
     var resultDiv = document.getElementById('resultbox');
     var submitButton = document.getElementById('submit');
     var restartButton = document.getElementById('restart');
