@@ -65,9 +65,9 @@ function timeOut(){
     $(".gbox").hide();
     $("#resultbox").show();
     $("#countdownbox").show();
-    $('#countdown').stop();
+    //$('#countdown').stop();
     $('#countdown').countdown({ 
-        until: +30, 
+        until: +5, 
         format: '<p>S</p>', 
         onExpiry: function () {
             // 30 seconds is up!
