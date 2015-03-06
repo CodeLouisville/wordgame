@@ -132,45 +132,45 @@ function loadScoreDiv() {
 }
 
 function displayResult(result) {
-    var resultDiv = document.getElementById('resultbox');
-    var resultDivText = document.getElementById('resultText');
-    var guessesDivText = document.getElementById('guessesText');
-    var submitButton = document.getElementById('submit');
-    var restartButton = document.getElementById('restart');
-    resultDiv.style.display = 'block';
-    submitButton.disabled = true;
+    var $resultDiv = $('#resultbox');
+    var $resultDivText = $('#resultText');
+    var $guessesDivText = ('#guessesText');
+    var $submitButton = $('#submit');
+    var $restartButton = $('#restart');
+    $resultDiv.style.display = 'block';
+    $submitButton.disabled = true;
     if (result) {
-        resultDivText.innerHTML = 'Correct!';
-        resultDiv.style.backgroundColor = 'rgba(0, 255, 0, 0.7)';
+        $resultDivText.innerHTML = 'Correct!';
+        $resultDiv.style.backgroundColor = 'rgba(0, 255, 0, 0.7)';
 
     } else {
         if (player.guesses > 0) {
-            resultDivText.innerHTML = 'Incorrect!';
-            guessesDivText.innerHTML = 'You have ' + player.guesses + ' guesses left.';
-            resultDiv.style.backgroundColor = 'rgba(255, 0, 0, 0.7)';
+            $resultDivText.innerHTML = 'Incorrect!';
+            $guessesDivText.innerHTML = 'You have ' + player.guesses + ' guesses left.';
+            $resultDiv.style.backgroundColor = 'rgba(255, 0, 0, 0.7)';
         } else {
-            resultDivText.innerHTML = 'GAME OVER';
-            guessesDivText.innerHTML = 'Final Score: ' + player.finalScore;
-            restartButton.style.display = "inline";
+            $resultDivText.innerHTML = 'GAME OVER';
+            $guessesDivText.innerHTML = 'Final Score: ' + player.finalScore;
+            $restartButton.style.display = "inline";
             return;
         }
     }
     setTimeout(function () {
-        resultDivText.innerHTML = '';
-        guessesDivText.innerHTML = '';
-        resultDiv.style.display = 'none';
-        submitButton.disabled = false;
-        document.getElementById('txtGuess').value = '';
+        $resultDivText.innerHTML = '';
+        $guessesDivText.innerHTML = '';
+        $resultDiv.style.display = 'none';
+        $submitButton.disabled = false;
+        $('#txtGuess').val() = '';
     }, 2000);
 }
 
 function restartGame() {
-    var resultDiv = document.getElementById('resultbox');
-    var submitButton = document.getElementById('submit');
-    var restartButton = document.getElementById('restart');
-    resultDiv.style.display = 'none';
-    submitButton.disabled = false;
-    restartButton.style.display = 'none';
+    var $resultDiv = $('#resultbox');
+    var $submitButton = $('#submit');
+    var $restartButton = $('#restart');
+    $resultDiv.style.display = 'none';
+    $submitButton.disabled = false;
+    $restartButton.style.display = 'none';
 
     resetSecretWord(secretWords, correctWords);
 
