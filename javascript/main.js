@@ -34,13 +34,14 @@ function getSecretWord() {
 $(document).ready(function () {
     console.log("started onLoad");
     refreshQuestions();
-    countDown();
+    
 });
 
 //This function is has the same code as onLoad but since onLoad() has been removed and 
 //replaced with jquery document.ready, I'm putting
 //it in another function which can then be called wherever onLoad is called(Pranay)
 function refreshQuestions(){
+    countDown();
     console.log("refreshQuestions...")
     var textGuess = $('#txtguess'); 
     currentSecretWord = getSecretWord();
@@ -169,8 +170,6 @@ function displayResult(result) {
 }
 
 function restartGame() {
-    //starting countDown
-    countDown();
     var resultDiv = document.getElementById('resultbox');
     var submitButton = document.getElementById('submit');
     var restartButton = document.getElementById('restart');
