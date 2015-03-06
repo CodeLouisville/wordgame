@@ -31,11 +31,7 @@ function getSecretWord() {
 }
 
 //adding jquery to run onLoad function when document is ready 
-$(document).ready(function () {
-    console.log("started onLoad");
-    refreshQuestions();
-    
-});
+$(document).ready(refreshQuestions);
 
 //This function is has the same code as onLoad but since onLoad() has been removed and 
 //replaced with jquery document.ready, I'm putting
