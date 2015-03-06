@@ -33,6 +33,13 @@ function getSecretWord() {
 //adding jquery to run onLoad function when document is ready 
 $(document).ready(function () {
     console.log("started onLoad");
+    refreshQuestions();
+});
+
+//This function is has the same code as onLoad but since onLoad() has been removed and 
+//replaced with jquery document.ready, I'm putting
+//it in another function which can then be called wherever onLoad is called(Pranay)
+function refreshQuestions(){
     var textGuess = $('#txtguess'); 
     currentSecretWord = getSecretWord();
     $('#hint').html("<p>" + currentSecretWord.hint + "</p>");
@@ -52,15 +59,15 @@ $(document).ready(function () {
             restartGame();
         }   
     });
-
-});
+    
+}
 
 
 function checkWord() {
     console.log("started checkWord");
-    var word = document.getElementById('txtGuess').value;
+    var $word = $('#txtGuess').val();
 
-    if (word.toLowerCase() == currentSecretWord.word) {
+    if ($word.toLowerCase() == currentSecretWord.$word) {
         updateScore(true);
         displayResult(true);
 
@@ -79,7 +86,7 @@ function checkWord() {
         // After wrong answer, focus and select the text in the text field. --Korey
         document.getElementById('txtGuess').select();
     }
-    onLoad();
+    refreshQuestions();
 }
 
 function updateScore(result) {
@@ -163,7 +170,7 @@ function restartGame() {
     resetSecretWord(secretWords, correctWords);
 
     resetPlayer();
-    onLoad();
+    refreshQuestions();
 }
 
 var resetSecretWord = function (mainArray, tempArray) {
