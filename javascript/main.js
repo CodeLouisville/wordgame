@@ -128,13 +128,9 @@ function loadScoreDiv() {
 }
 
 function displayResult(result) {
-    var $resultDiv = $('#resultbox');
-    var $resultDivText = $('#resultText');
-    var $guessesDivText = ('#guessesText');
-    var $submitButton = $('#submit');
-    var $restartButton = $('#restart');
-    $resultDiv.css("display","block");
-    $submitButton.disabled = true;
+    
+    $('#resultbox').css("display","block");
+    $('#submit').disabled = true;
     if (result) {
        $('#resultText').innerHTML = 'Correct!';
          $('#resultBox').css({'background-color':'rgba(255, 0, 0, 0.7)'});
@@ -152,10 +148,8 @@ function displayResult(result) {
         }
     }
     setTimeout(function () {
-        $resultDivText.innerHTML = '';
-        $guessesDivText.innerHTML = '';
-        $resultDiv.style.display = 'none';
-        $submitButton.disabled = false;
+        $('#resultbox').hide()
+        $('#submit').disabled = false;
         $('#txtGuess').val() = '';
     }, 2000);
 }
