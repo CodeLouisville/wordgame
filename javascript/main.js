@@ -133,7 +133,7 @@ function displayResult(result) {
     var $guessesDivText = ('#guessesText');
     var $submitButton = $('#submit');
     var $restartButton = $('#restart');
-    $resultDiv.style.display = 'block';
+    $resultDiv.css("display","block");
     $submitButton.disabled = true;
     if (result) {
         $resultDivText.innerHTML = 'Correct!';
