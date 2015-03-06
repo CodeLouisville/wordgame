@@ -57,6 +57,7 @@ function refreshQuestions(){
             
             $('#countdownbox').hide();
             $('#resultText').html('You took too long!');
+            $('#resultBox').css({'background-color':'rgba(255, 0, 0, 0.7)'});
             $('#resultbox').show();
         }   
     });
