@@ -34,6 +34,7 @@ function getSecretWord() {
 $(document).ready(function () {
     console.log("started onLoad");
     refreshQuestions();
+    countDown();
 });
 
 //This function is has the same code as onLoad but since onLoad() has been removed and 
@@ -50,7 +51,7 @@ function refreshQuestions(){
     // Focus back on the text input for the next question. --Korey
     textGuess.focus();
     //reset the countdown and make it zero if it was used anywhere
-    countDown();
+    
 }
 
 //putting countDown in a function
