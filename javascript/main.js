@@ -49,7 +49,8 @@ function refreshQuestions(){
     textGuess.value = '';
     // Focus back on the text input for the next question. --Korey
     textGuess.focus();
-
+    //reset the countdown and make it zero if it was used anywhere
+    $('#countdown').stop();
     $('#countdown').countdown({ 
         until: +10, 
         format: '<p>S</p>', 
