@@ -50,6 +50,11 @@ function refreshQuestions(){
     // Focus back on the text input for the next question. --Korey
     textGuess.focus();
     //reset the countdown and make it zero if it was used anywhere
+    countDown();
+}
+
+//putting countDown in a function
+function countDown(){
     $('#countdown').stop();
     $('#countdown').countdown({ 
         until: +10, 
@@ -61,9 +66,7 @@ function refreshQuestions(){
             restartGame();
         }   
     });
-    
 }
-
 
 function checkWord() {
     console.log("started checkWord");
