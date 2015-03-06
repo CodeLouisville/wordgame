@@ -140,7 +140,7 @@ function displayResult(result) {
 
     } else {
         if (player.guesses > 0) {
-            $('#resultText').innerHTML = 'Incorrect!';
+            $('#resultText').html('Incorrect!');
             $('#guessesText').innerHTML = 'You have ' + player.guesses + ' guesses left.';
             $('#resultbox').css({'background-color':'rgba(255, 0, 0, 0.7)'});
         } else {
