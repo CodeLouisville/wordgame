@@ -161,12 +161,7 @@ function displayResult(result) {
 }
 
 function restartGame() {
-    var $resultDiv = $('#resultbox');
-    var $submitButton = $('#submit');
-    var $restartButton = $('#restart');
-    $resultDiv.style.display = 'none';
-    $submitButton.disabled = false;
-    $restartButton.style.display = 'none';
+    $('#resultbox').hide();
 
     resetSecretWord(secretWords, correctWords);
 
