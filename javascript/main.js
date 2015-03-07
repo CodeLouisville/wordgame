@@ -75,7 +75,7 @@ function refreshQuestions(){
 
 
 function checkWord() {
-    $('#scorebox').hide();
+    
     console.log("started checkWord");
     var word = $('#txtGuess').val();
 
