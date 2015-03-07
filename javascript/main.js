@@ -38,7 +38,6 @@ $(document).ready(refreshQuestions);
 //it in another function which can then be called wherever onLoad is called(Pranay)
 function refreshQuestions(){
     console.log("refreshQuestions...");
-    $('#scorebox').hide();
     $('#submit').show();
     $('#countdownbox').show();
     var textGuess = $('#txtguess'); 
@@ -76,7 +75,7 @@ function refreshQuestions(){
 
 
 function checkWord() {
-    
+    $('#scorebox').hide();
     console.log("started checkWord");
     var word = $('#txtGuess').val();
 
