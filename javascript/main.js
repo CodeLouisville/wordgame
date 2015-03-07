@@ -37,7 +37,8 @@ $(document).ready(refreshQuestions);
 //replaced with jquery document.ready, I'm putting
 //it in another function which can then be called wherever onLoad is called(Pranay)
 function refreshQuestions(){
-    console.log("refreshQuestions...")
+    console.log("refreshQuestions...");
+    $('#submit').show();
     $('#countdownbox').show();
     var textGuess = $('#txtguess'); 
     currentSecretWord = getSecretWord();
