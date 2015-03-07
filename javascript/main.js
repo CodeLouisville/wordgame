@@ -63,7 +63,7 @@ function refreshQuestions(){
             setTimeout(function () {
             $('#resultbox').hide()
             $('#submit').disabled = false;
-            refreshQuestions();
+            //refreshQuestions();
             }, 2000);
         }   
     });
